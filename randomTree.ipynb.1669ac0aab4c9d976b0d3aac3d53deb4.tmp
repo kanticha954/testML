@@ -1,0 +1,16 @@
+ for i in range(10):
+    #Fitting Decision Tree classifier to the training set  
+    from sklearn.ensemble import RandomForestClassifier  
+    classifier= RandomForestClassifier(n_estimators= 10, criterion="entropy")  
+
+    classifier.fit(x_train, y_train)
+    
+    #Predicting the test set result  
+    y_pred= classifier.predict(x_test)  
+    y_pred
+    
+    #test predict
+    classifier.predict([[27400, 84, 19087, 90, 12500.04, 90, 22000, 100,22000, 100, 68,29,-155]])
+    
+    print("Accuracy = ",accuracy_score(y_test, y_pred))
+    print('MAE: %.3f' % mae(y_test, y_pred))
