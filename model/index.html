@@ -1,0 +1,51 @@
+<body>
+  <div class="container">
+    <form action="{{url_for('getPredict')}}" method="POST">
+      <h1 style="color:DodgerBlue;">Model Result</h1>
+      <p>Input variables in model</p>
+      <hr>
+      
+      <label for="value"><b>Resistance Thumb</b></label>
+      <input type="text" placeholder="Enter Resistance Thumb" name="resistance_thumb" required>
+      
+      <label for="value"><b>Bend Thumb</b></label>
+      <input type="text" placeholder="Enter Bend Thumb" name="bend_thumb" required>
+      
+      <label for="value"><b>Resistance Index</b></label>
+      <input type="text" placeholder="Enter Resistance Index" name="resistance_index" required>
+
+      <label for="value"><b>Bend Index</b></label>
+      <input type="text" placeholder="Enter Bend Index" name="bend_index" required>
+
+      <label for="value"><b>Resistance Mid</b></label>
+      <input type="text" placeholder="Enter Resistance mid" name="resistance_mid" required>
+
+      <label for="value"><b>Bend Mid</b></label>
+      <input type="text" placeholder="Enter Bend mid" name="bend_mid" required>
+
+      <label for="value"><b>Resistance Ring</b></label>
+      <input type="text" placeholder="Enter Resistance mid" name="resistance_ring" required>
+
+      <label for="value"><b>Bend Ring</b></label>
+      <input type="text" placeholder="Enter Bend mid" name="bend_ring" required>
+
+      <label for="value"><b>Resistance little</b></label>
+      <input type="text" placeholder="Enter Resistance little" name="resistance_little" required>
+      <label for="value"><b>Bend little</b></label>
+
+      <input type="text" placeholder="Enter X" name="x" required>
+      <label for="value"><b>Point X</b></label>
+      <input type="text" placeholder="Enter Y" name="y" required>
+      <label for="value"><b>Point Y</b></label>
+      <input type="text" placeholder="Enter Z" name="z" required>
+
+      <hr>
+      
+      <button type="submit" class="predictbtn">Get prediction</button>
+    </form>
+
+    <br>
+    <br>
+    <h1 style="color:IndianRed;">{{prediction_text}}</h1>
+  </div>
+</body>
